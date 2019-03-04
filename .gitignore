@@ -1,0 +1,7 @@
+# Idea
+.idea
+
+# MacOS
+.DS_store
+
+.env
