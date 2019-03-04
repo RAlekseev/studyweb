@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #dcdcdc;
+}
+
+header{
+    height: 140px;
+    background-color: #1d6887;
+    position: relative;
+}
+
+.d1 {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 100px;
+    height: 100px;
+    background: #b44561;
+    border-radius: 50%;
+}
