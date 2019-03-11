@@ -1,13 +1,4 @@
 
-var num1 = 3;
+var user_name = prompt("Введите ваше имя", "Имя");
 
-function isInteger(num){
-    if ((num^0) === num){
-        alert("Целое");
-    }
-    else{
-        alert("Нецелое");
-    }
-}
-
-isInteger(num1);
+alert(user_name);
