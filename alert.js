@@ -1,59 +1,38 @@
-// || ПЕРВОЕ задание ||
+var age = 19;
 
-var user_answer = prompt("Каково «официальное» название JavaScript?","");
+function checkAge(age) {
 
-if (user_answer == "ECMAScript")
-    alert("Yo god damn right");
-else
-    alert("Wrong");
-
-// || Второе задание ||
-
-var user_num = prompt("Введите число","");
-
-if (user_num > 0)
-    alert(1);
-else if (user_num < 0)
-    alert(-1);
-else
-    alert(0);
-
-// || Третье задание ||
-
-var user_role = prompt("Введите Логин","");
-
-if (user_role == "Admin") {
-    user_pass = prompt("Введите ваш пароль", "");
-    if (user_pass == "pass1")
-        alert("Добро пожаловать");
-    else if (user_pass == null)
-        alert("Выход отменен");
-    else
-        alert("Пароль неверен");
+    return ((age > 18)?true:confirm('Родители разрешили'));
 }
-else if (user_role == null)
-    alert("Выход отменен");
-else
-    alert("Я вас не знаю");
 
-// || ЧЕТВЕРТОЕ задание ||
+function checkAge2(age) {
 
-var a = 1;
-var b = 2;
-result = (a + b < 4) ? "Мало" : "Много";
-alert(result);
-
-// || ПЯТОЕ задание ||
+    return (age > 18)||confirm('Родители разрешили');
+}
 
 
+alert(checkAge(age));
+alert(checkAge2(age));
 
-var message;
-var user_name = prompt("Введите свое имя", "");
+// Второе задание //
 
-message = (user_name == 'Вася')?'Привет':
-    (user_name == 'Директор')?'Здравствуйте':
-        (user_name == '')?'Нет логина': '';
- alert(message);
+function min(a,b) {
+    return (a > b)?b:a;
+}
 
+var b = 5;
+alert(min(age,b));
 
+// Третье задание //
+var x = prompt("x?");
+var n = prompt("n?");
 
+function pow(x,n) {
+    var res = x;
+    for(var i = 1;i<n;i++)
+        res *= x;
+    return res;
+
+}
+
+alert(pow(x,n));
