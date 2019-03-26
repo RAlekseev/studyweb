@@ -1,25 +1,36 @@
-// Первое задание //
+// Первое задание приведение первой буквы к верхнему регистру//
 
-var first = +prompt('Введите первое число');
-var second = +prompt('Введите второе число');
-
-alert(first + second);
-
-// Второе задание формула Бине//
-
-function fibBine(n) {
-    x = Math.pow( ((1 + Math.sqrt(5))/2) , n)/Math.sqrt(5);
-    return Math.round(x);
+function ucFirst(str){
+    firstChar = str.charAt(0);
+    return firstChar.toUpperCase() + str.slice(1);
 }
 
-alert('Для n = ' + 77 + '\nРезультат функции считающей фрактал через формулу Бине:' + fibBine(77));
+alert( ucFirst('Вася') );
+
+// Второе задание проверка на спам/
+
+function checkSpam(str){
+    strLow = str.toLowerCase();
+    return !!( ~strLow.indexOf('viagra') || ~strLow.indexOf('xxx') )
+}
+
+alert( checkSpam("innocent rabbit"));
 
 // Третье задание, случайное число от min до maks //
 
+function truncate(str, maxlength) {
+    if (str.length > maxlength){
+        return str.slice(0,maxlength - 3) + '...';
+    }
+    return str;
+}
 
- function random(min,max) {
-     return (Math.random(1) * (max - min) + min);
- }
+alert( truncate("Вот, что мне", 20));
 
+// Четвертое задание: Выделить число //
 
-alert( random(10,40));
+function extractCurrencyValue(str){
+    return parseInt(str.slice(1));
+}
+
+alert( extractCurrencyValue('$120'));
