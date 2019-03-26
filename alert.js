@@ -16,6 +16,7 @@ alert('Для n = ' + 77 + '\nРезультат функции считающе
 
 // Третье задание, случайное число от min до maks //
 
+
  function random(min,max) {
      return (Math.random(1) * (max - min) + min);
  }
